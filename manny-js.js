@@ -1,6 +1,7 @@
 
 
 var userId;
+var numsubmitted=0;
 'use strict';
 
 //grab a form
@@ -28,7 +29,7 @@ var ref = firebase.database().ref('SpaceCon');
 
 ref.on("value", function(snapshot) {
    user=(snapshot.val().userId);
-   console.log(snapshot.val().userId);
+   //console.log(snapshot.val().userId);
 }, function (error) {
    console.log("Error: " + error.code);
 });
@@ -66,15 +67,21 @@ ref.on("value", function(snapshot) {
     if (form) {
         form.addEventListener('submit', function (evt) {
             evt.preventDefault();
+            if (numsubmitted == 0){
+                numsubmitted = 1;
+                writeUserData(user.userId,inputName,inputEmail);
+                user.userId=user.userId+1;
+                firebase.database().ref('SpaceCon/userId').set({
+                  userId: user.userId
+                  });
+                  $("#contactus")[0].reset();
+            }
 
 
 
-            writeUserData(user.userId,inputName,inputEmail);
-            user.userId=user.userId+1;
-            firebase.database().ref('SpaceCon/userId').set({
-              userId: user.userId
-              });
-              $("#contactus")[0].reset();
+
+
+
             //shows alert if everything went well.
             //return alert('Data Successfully Sent to Realtime Database');
         })
