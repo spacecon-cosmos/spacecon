@@ -23,6 +23,11 @@
     <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- Button action -->
+    <script> function confirmSubmit() {
+      alert("¡Inscripción completada!");
+    }
+    </script>
     <!-- Title and Favicon -->
     <title>SpaceCon</title>
 
@@ -105,7 +110,7 @@
                                         <input type="email" class="form-control" id="inputEmail" placeholder="Correo" required>
                                     </div>
                                     <div class="text-center">
-                                        <button   type="submit" class="btn btn-info " id="wrapper"  >Enviar</button>
+                                        <button   type="submit" class="btn btn-info " id="wrapper" onclick="confirmSubmit()" >Enviar</button>
                                     </div>
                                     <div class="text-center">
                                     </div>
