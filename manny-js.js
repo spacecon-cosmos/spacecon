@@ -12,15 +12,15 @@ const inputEmail = form.querySelector('#inputEmail');
 const inputName = form.querySelector('#name');
 
 //config your firebase push
-const firebaseConfig = {
-  apiKey: "AIzaSyDVdwqEM-C-PzSSRWe8CX4h0OSUpPUqk4Q",
-  authDomain: "spacecon-emails-2021.firebaseapp.com",
-  databaseURL: "https://spacecon-emails-2021-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "spacecon-emails-2021",
-  storageBucket: "spacecon-emails-2021.appspot.com",
-  messagingSenderId: "788090785076",
-  appId: "1:788090785076:web:76c4470c6add568ff6a961",
-  measurementId: "G-ECNHEFPBZ0"
+const config = {
+  apiKey: "AIzaSyAN8F4CKWg0EBStu0xr3EKj3B2540y6-jE",
+  authDomain: "spacecon-emails.firebaseapp.com",
+  databaseURL: "https://spacecon-emails.firebaseio.com",
+  projectId: "spacecon-emails",
+  storageBucket: "spacecon-emails.appspot.com",
+  messagingSenderId: "1034066458488",
+  appId: "1:1034066458488:web:f9641fa550047bb79fba8d"
+
 };
 firebase.initializeApp(config);
 
