@@ -1,213 +1,316 @@
 <!DOCTYPE html>
-<html>
-
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta content="description" name="description">
-    <!-- <meta name="google" content="notranslate" /> -->
-    <meta name="google-site-verification" content="KVHKQuvyAXNcHqUWI-miS0GF5EcD8ki22eojkpxLEF4" />
-    <meta content="Mashup templates have been developped by Orson.io team" name="author">
-
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <link href="./assets/apple-touch-icon.png" rel="apple-touch-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Title and Favicon -->
-    <title>SpaceCon</title>
-
-    <meta name="description" content="SpaceCon: Congreso Universitario del Espacio. Universidad Rey Juan Carlos.">
-
-
-  <style>
-    body {
-      background-color: #212022;
-      color: #fff;
-      font-size: 2em;
-      text-align: center;
-      padding-top: 17%;
-    }
-   
-    h1{
-        font-family: 'Roboto', sans-serif;
-        color: #008a89;
-        
-    }
-
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-  </style>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="SpaceCon: Congreso Universitario del Espacio. Universidad Rey Juan Carlos.">
+	<meta name="author" content="Mashup templates have been developed by Orson.io team">
+	<meta name="google-site-verification" content="KVHKQuvyAXNcHqUWI-miS0GF5EcD8ki22eojkpxLEF4">
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- Favicon -->
+	<link href="./assets/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./assets/favicon/site.webmanifest">
+	<link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="icon" type="image/png" href="./assets/favicon/apple-touch-icon.png">
+	<!-- Stylesheets -->
+	<link href="./css/main.a3f694c0.css" rel="stylesheet">
+	<!-- JavaScript -->
+	<script src="js/main.41beeca9.js"></script>
+	<!-- Title -->
+	<title>SpaceCon</title>
 </head>
-<body>
-<div id="particles-js"></div>
-
-<div style="text-align:center">
-    <h1>Nueva web Spacecon</h1>
-</div>
-
-<div id="cuentaAtras" style="font-family: 'Roboto', sans-serif;"></div>
-
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  particlesJS("particles-js", {
-    particles: {
-      number: {
-        value: 100,
-        density: {
-          enable: true,
-          value_area: 800
-        }
-      },
-      color: {
-        value: ["#ffffff", "#008a89"]
-      },
-      shape: {
-        type: "circle",
-        stroke: {
-          width: 0,
-          color: "#000000"
-        },
-        polygon: {
-          nb_sides: 5
-        },
-        image: {
-          src: "img/github.svg",
-          width: 100,
-          height: 100
-        }
-      },
-      opacity: {
-        value: 0.5,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 1,
-          opacity_min: 0.1,
-          sync: false
-        }
-      },
-      size: {
-        value: 10,
-        random: true,
-        anim: {
-          enable: false,
-          speed: 40,
-          size_min: 0.1,
-          sync: false
-        }
-      },
-      line_linked: {
-        enable: false,
-        distance: 500,
-        color: "#ffffff",
-        opacity: 0.4,
-        width: 2
-      },
-      move: {
-        enable: true,
-        speed: 2,
-        direction: "none",
-        random: true,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-        attract: {
-          enable: false,
-          rotateX: 600,
-          rotateY: 1200
-        }
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: {
-          enable: false,
-          mode: "grab"
-        },
-        onclick: {
-          enable: false,
-          mode: "push"
-        },
-        resize: true
-      },
-      modes: {
-        grab: {
-          distance: 400,
-          line_linked: {
-            opacity: 1
-          }
-        },
-        bubble: {
-          distance: 400,
-          size: 40,
-          duration: 2,
-          opacity: 8,
-          speed: 3
-        },
-        repulse: {
-          distance: 200,
-          duration: 0.4
-        },
-        push: {
-          particles_nb: 4
-        },
-        remove: {
-          particles_nb: 2
-        }
-      }
-    },
-    retina_detect: true
-  });
+$(document).ready(function() {
+	// Verificar si la cookie existe
+	var cookieName = "animationExecuted";
+	var animationExecuted = getCookie(cookieName);
+	if(!animationExecuted) {
+		// Ejecutar la animación solo si la cookie no existe
+		$("#carga").show();
+		$("#contenidos").hide();
+		setTimeout(function() {
+			$("#carga").hide();
+			$("#contenidos").show();
+			$("#contenidos").show().css("opacity", 0).animate({
+				opacity: 1
+			}, 400);
+			// Establecer la cookie para recordar que la animación ya se ejecutó
+			setCookie(cookieName, true, 365); // La cookie expirará en 365 días
+		}, 3000); // Delay de 6400 milisegundos (6.4 segundos)
+	} else {
+		// La animación ya se ejecutó previamente, mostrar directamente los contenidos
+		$("#carga").hide();
+		$("#contenidos").show();
+	}
+});
+/* revisar cookis */
+// Función para obtener el valor de una cookie
+function getCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while(c.charAt(0) === ' ') c = c.substring(1, c.length);
+		if(c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+	}
+	return null;
+}
+// Función para establecer una cookie
+function setCookie(name, value, days) {
+	var expires = "";
+	if(days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		expires = "; expires=" + date.toUTCString();
+	}
+	document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
-  function cuentaAtras(fechaObjetivo) {
-    var ahora = new Date().getTime();
-    var distancia = fechaObjetivo - ahora;
-
-    var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-    var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-    var segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-
-    document.getElementById("cuentaAtras").innerHTML = dias + " días " + horas + " horas " + minutos + " minutos " + segundos + " segundos ";
-
-    if (distancia < 0) {
-      clearInterval(intervalo);
-      document.getElementById("cuentaAtras").innerHTML = "¡Bienvenidos!";
-    }
-  }
-
-  var fechaObjetivo = new Date("Jul 18, 2023 23:59:59").getTime();
-  var intervalo = setInterval(function() { cuentaAtras(fechaObjetivo); }, 1000);
+function deleteAllCookies() {
+	var cookies = document.cookie.split(";");
+	for(var i = 0; i < cookies.length; i++) {
+		var cookie = cookies[i];
+		var eqPos = cookie.indexOf("=");
+		var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+		document.cookie = name.trim() + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+	}
+}
 </script>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            navActivePage();
-        });
-    </script>
 
+<body>
+	<div id="carga" class="load">
+		<div class="animation01" style="background-color: #212022;">
+			<div class="rhombus_small">
+				<div class="rhombus">
+					<div class="border_box"> <span class="line line01"></span> <span class="line line02"></span> <span class="line line03"></span> <span class="line line04"></span> <span class="circle circle01"></span> <span class="circle circle02"></span> <span class="circle circle03"></span> <span class="circle circle04"></span> <span class="animation_line animation_line01"></span> <span class="animation_line_wrapper animation_line02_wrapper"><span class="animation_line animation_line02"></span></span> <span class="animation_line animation_line03"></span> <span class="animation_line_wrapper animation_line04_wrapper"><span class="animation_line animation_line04"></span></span> <span class="animation_line animation_line05"></span> <span class="animation_line_wrapper animation_line06_wrapper"><span class="animation_line animation_line06"></span></span> <span class="animation_line animation_line07"></span> <span class="animation_line_wrapper animation_line08_wrapper"><span class="animation_line animation_line08"></span></span>
+					</div>
+					<div class="wave">
+						<div class="wave_wrapper">
+							<div class="wave_box"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <script type="text/javascript" src="./main.41beeca9.js"></script></div>
-</body>
+	<body>
+		<!-- Add your content of header -->
+		<div id="contenidos">
+			<header>
+				<nav class="navbar  navbar-fixed-top navbar-default">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle uarr collapsed" data-toggle="collapse" data-target="#navbar-collapse-uarr"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+							<a class="navbar-brand" href="./index.html" title=""> <img src="./assets/images/spacecon_2023/Version2negative_long_web.png" class="navbar-logo-img" alt="Logo" width="200" height="38"> </a>
+						</div>
+						<div class="collapse navbar-collapse" id="navbar-collapse-uarr">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="./index.html" title="" class="active">SpaceCon</a></li>
+								<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Programa
+                          <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="./programa_2020.html">Programa 2020</a></li>
+										<li><a href="./programa_2021.html">Programa 2021</a></li>
+										<li><a href="./programa_2022.html">Programa 2022</a></li>
+										<li><a href="./programa_2023.html">Programa 2023</a></li>
+									</ul>
+								</li>
+								<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ponentes
+                          <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="./ponentes_2020.html">Ponentes 2020</a></li>
+										<li><a href="./ponentes_2021.html">Ponentes 2021</a></li>
+										<li><a href="./ponentes_2022.html">Ponentes 2022</a></li>
+										<li><a href="./ponentes_2023.html">Ponentes 2023</a></li>
+									</ul>
+								</li>
+								<li><a href="./faq.html" title="">FAQ</a></li>
+								<li><a href="./contacto.html" title="">Contacto</a></li>
+								<li>
+									<button onclick="redirectToEvent()" style="margin-top: 6%;margin-left: 10px;" class="btn3"><span>Preinscripción abierta</span></button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<div class="cont">
+				<div style="height: 80vh; margin-top: 60px;">
+					<h1 style="font-size: 100px;initial-letter: 10px;" class="contextra">
+            <em>S</em>
+            <em>P</em>
+            <em>A</em>
+            <em>C</em>
+            <em>E</em>
+            <em>C</em>
+            <em>O</em>
+            <em>N</em>
+            <em> </em>
+            <em>2</em>
+            <em>0</em>
+            <em>2</em>
+            <em>3</em></h1> </div>
+			</div>
+			<div class="text-center">
+				<a class="scroll-arrow" href="#inicio">
+					<div class="arrow"></div>
+				</a>
+			</div>
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script>
+			$(document).ready(function() {
+				// Agrega un controlador de eventos de clic a cada enlace con la clase "scroll-arrow"
+				$('a.scroll-arrow').on('click', function(event) {
+					event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+					// Obtén el atributo href del enlace
+					var targetId = $(this).attr('href');
+					// Desplázate suavemente hasta el elemento de destino
+					$('html, body').animate({
+						scrollTop: $(targetId).offset().top
+					}, 1000);
+				});
+			});
+			</script>
+			<div style=" background: rgb(34,193,195); background: #000000; background-repeat: no-repeat; background-size: cover;">
+				<br>
+				<br>
+				<br>
+				<div id="inicio" style="height: 4vh; margin-top:60px; "></div>
+				<div class="section-container">
+					<div class="container" ;>
+						<div class="row">
+							<div class="col-md-12 col-xs-offset-0 section-container-spacer">
+								<div class="text-center">
+									<h4 style="color: rgb(255, 255, 255); margin-top: 80px; " ;><b> CUARTA EDICIÓN: Campus de Fuenlabrada </b></h4>
+									<p style="color: rgb(255, 255, 255);"> SpaceCon es una iniciativa de alumnos y alumnas de Ingeniería Aeroespacial de la Universidad Rey Juan Carlos. Se trata de un congreso que reúne a profesionales de varias ramas de la ciencia y la tecnología del espacio. Ingenier@s, técnic@s, investigador@s, estudiantes, agencias y empresas del sector presentan su labor en este congreso virtual. SpaceCon sirve así como punto de encuentro de asociaciones estudiantiles aeroespaciales, investigadores, profesionales del sector, empresas, estudiantes y generalmente cualquier persona interesada en el sector espacial. </p>
+									<br>
+									<p><b style="color: rgb(255, 255, 255);">¡No te pierdas la cuarta edición del SpaceCon! </b></p>
+									<button onclick="redirectToEvent()" style="margin-top: 20px; height: 70px;width: 400px;font-size: 20px;" class="btn4"><span>Preinscripción 2023 abierta</span></button>
+									<br> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="separator"></div>
+			</div>
+			<br>
+			<br>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="fa-container"> <i class="fa fa-flask fa-3x" aria-hidden="true"></i> </div>
+						<div class="text-center">
+							<h3>Ciencia</h3> </div>
+						<div>
+							<p> Astrofísica, experimentos en sondas espaciales, la ISS, investigación en laboratorios universitarios: la ciencia es el motor del sector espacial. </p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fa-container"> <i class="fa fa-rocket fa-3x" aria-hidden="true"></i> </div>
+						<div class="text-center">
+							<h3>Tecnología</h3> </div>
+						<div>
+							<p> Aplicaciones de ingeniería en desarrollos punteros para la exploración espacial y todo lo que hay detrás de ella. </p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fa-container"> <i class="fa fa-star fa-3x" aria-hidden="true"></i> </div>
+						<div class="text-center">
+							<h3>Educación</h3> </div>
+						<div>
+							<p> Nuestra meta es promover el interés por el espacio entre los y las estudiantes, incentivando a los que se incorporarán próximamente al mundo laboral. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="separator" style="margin-top: 80px; margin-bottom: 30px;"></div>
+			<div class=" container">
+				<div class="row">
+					<div class="col-xs-6 col-xs-offset-3 text-align:center">
+						<h2 style="text-align:center; font-family: 'Azonix', sans-serif;">Ediciones anteriores</h2>
+						<p style="text-align:center">Por si te lo perdiste, puedes visualizar varias jornadas del SpaceCon 2020, 2021 y 2022 en el canal de YouTube de la Asociación Aeroespacial Cosmos. </p>
+						<div class="video-responsive">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/HnPS8Dp07tg?start=541" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="separator" style="margin-top: 50px;"></div>
+			<div class="container">
+				<div>
+					<div class="row">
+						<div class="col-xs-8 col-xs-offset-2">
+							<h2 style="text-align:center; font-family: 'Azonix', sans-serif;">Entidades colaboradoras</h2>
+							<p style="text-align:center">SpaceCon surgió como iniciativa dentro de la asociación aeroespacial Cosmos, buscando estrechar la relación entre los alumnos y alumnas universitarios/as y el mundo profesional. SpaceCon es un evento sin ánimo de lucro y para su organización, Cosmos cuenta con el apoyo de las siguientes entidades:</p>
+						</div>
+					</div>
+					<br>
+					<!-- SPONSORS CARRUSEL  -->
+					<div style="margin-bottom: 20px;">
+						<div class="slider">
+							<div class="slide-track">
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/1.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/2.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/3.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/4.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/5.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/6.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/1.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/2.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/3.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/4.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/5.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/6.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/1.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/2.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/3.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/4.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/5.png" alt=""> </div>
+								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/6.png" alt=""> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer style="background-color: #cbcbcbe2;">
+				<div class="section-container footer-container">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-5 col-xs-offset-2">
+								<h4>Organización</h4>
+								<p>SpaceCon es una iniciativa de la Asociación Aeroespacial Cosmos de la Universidad Rey Juan Carlos, con apoyo institucional de la ETSIT y la EIATA.</p>
+							</div>
+							<div class="col-xs-4 col-md-offset-0">
+								<div class="text-center">
+									<h4>¡Síguenos en redes!</h4>
+									<p>
+										<a href="https://www.instagram.com/spacecon_urjc/" class="social-round-icon white-round-icon fa-icon" title=""> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
+										<a href="https://twitter.com/spacecon_urjc" class="social-round-icon white-round-icon fa-icon" title=""> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+				</div>
+			</footer>
+			<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				navActivePage();
+			});
+			</script>
+	</body>
+
 </html>
