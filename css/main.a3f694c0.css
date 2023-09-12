@@ -7220,4 +7220,26 @@ ADAPTACIÓN A PANTALLA
 	}
 	
 
+
+
+	
+}
+
+.contenedor {
+	position: relative;
+	display: inline-block;
+	
+}
+.texto-hover {
+	display: none;
+	position: absolute;
+	bottom: -40px;
+	left: 3vw;
+	background-color: grey;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.contenedor:hover .texto-hover {
+	display: block;
 }
