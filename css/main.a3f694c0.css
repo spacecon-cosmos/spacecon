@@ -6086,10 +6086,10 @@ pro_:after {
 		 url('./Azonix.otf') format('woff');
 }
 
-em {
+/* em {
 	font-family: 'Azonix', sans-serif;
 	color: currentColor;
-	font-size: 100px;
+	font-size: 10vh;
 	position: relative;
 	font-style: normal;
 	width: 110px;
@@ -6098,7 +6098,33 @@ em {
 }
   
   
+   */
+
+/* Estilos para ordenador */
+@media screen and (min-width: 768px) {
+	em {
+		font-family: 'Azonix', sans-serif;
+	  color: currentColor;
+	  font-size: 10vh;
+	  position: relative;
+	  font-style: normal;
+	  width: 110px;
+	  }
+	}
+  /* Estilos para pantallas de móvil */
+ @media screen and (max-width: 767px) {
   
+  em {
+	font-family: 'Azonix', sans-serif;
+	color: currentColor;
+	font-size: 5vh;
+	position: relative;
+	font-style: normal;
+	width: 4.5vh;
+	}
+  }
+
+
 
 
 
@@ -7171,4 +7197,27 @@ animation01
 
 .button:hover .button__vertical {
 	transform: scaleY(0);
+}
+
+/* 
+ADAPTACIÓN A PANTALLA
+*/
+
+@media (max-width: 1200px) {
+    /* Aquí SE definEN los estilos para pantallas pequeñas */
+
+	.navbar-toggle {
+		position: relative;
+		float: right;
+		margin-right: auto;
+		padding: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+		background-color: transparent;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 2px
+	}
+	
+
 }
