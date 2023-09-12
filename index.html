@@ -88,7 +88,7 @@ function deleteAllCookies() {
 }
 </script>
 
-<body>
+<body onload="mostrarImagen()">
 	<div id="carga" class="load">
 		<div class="animation01" style="background-color: #212022;">
 			<div class="rhombus_small">
@@ -241,7 +241,7 @@ function deleteAllCookies() {
 			<div class="separator" style="margin-top: 80px; margin-bottom: 30px;"></div>
 			<div class=" container">
 				<div class="row">
-					<div class="col-xs-6 col-xs-offset-3 text-align:center">
+					<div class="text-align:center">
 						<h2 style="text-align:center; font-family: 'Azonix', sans-serif;">Ediciones anteriores</h2>
 						<p style="text-align:center">Por si te lo perdiste, puedes visualizar varias jornadas del SpaceCon 2020, 2021 y 2022 en el canal de YouTube de la Asociación Aeroespacial Cosmos. </p>
 						<div class="video-responsive">
@@ -254,7 +254,7 @@ function deleteAllCookies() {
 			<div class="container">
 				<div>
 					<div class="row">
-						<div class="col-xs-8 col-xs-offset-2">
+						<div >
 							<h2 style="text-align:center; font-family: 'Azonix', sans-serif;">Entidades colaboradoras</h2>
 							<p style="text-align:center">SpaceCon surgió como iniciativa dentro de la asociación aeroespacial Cosmos, buscando estrechar la relación entre los alumnos y alumnas universitarios/as y el mundo profesional. SpaceCon es un evento sin ánimo de lucro y para su organización, Cosmos cuenta con el apoyo de las siguientes entidades:</p>
 						</div>
@@ -269,6 +269,7 @@ function deleteAllCookies() {
 								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/3.png" alt=""> </div>
 								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/4.png" alt=""> </div>
 								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/5.png" alt=""> </div>
+								<div id="imagenAlerta" style="display: none; margin-left: 10px;margin-right: 10px;" > <img  src="./assets/images/EntidadesColaboradoras/descuento.jpg"  style="height: 60px; width: 60px ;margin-top: 10px;" alt="Alerta" onclick="mostrarAlerta()" ></div>
 								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/6.png" alt=""> </div>
 								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/1.png" alt=""> </div>
 								<div class="slide"> <img src="./assets/images/EntidadesColaboradoras/2.png" alt=""> </div>
@@ -313,6 +314,22 @@ function deleteAllCookies() {
 			document.addEventListener("DOMContentLoaded", function(event) {
 				navActivePage();
 			});
+			</script>
+			<script>
+				function mostrarImagen() {
+					var probabilidad = Math.random();
+					var imagen = document.getElementById("imagenAlerta");
+		
+					if (probabilidad <= 0.1) {
+						imagen.style.display = "block";
+					} else {
+						imagen.style.display = "none";
+					}
+				}
+		
+				function mostrarAlerta() {
+					alert("Descuento del 35%: 35DESC-SPCON");
+				}
 			</script>
 	</body>
 
